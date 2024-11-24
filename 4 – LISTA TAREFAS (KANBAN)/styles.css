@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.input-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#entradaTarefa {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#botaoAdicionarTarefa {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#botaoAdicionarTarefa:hover {
+    background-color: #45a049;
+}
+
+.quadro-kanban {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Quatro colunas, uma para cada status */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.coluna-kanban {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 15px;
+    min-height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho-coluna {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos de cores para cada status */
+.coluna-kanban:nth-child(1) .cabecalho-coluna {
+    background-color: #ffeb3b;
+    color: #000;
+}
+
+.coluna-kanban:nth-child(2) .cabecalho-coluna {
+    background-color: #ff9800;
+}
+
+.coluna-kanban:nth-child(3) .cabecalho-coluna {
+    background-color: #90caf9;
+}
+
+.coluna-kanban:nth-child(4) .cabecalho-coluna {
+    background-color: #4caf50;
+}
+
+.cartoes-kanban {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: move;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #ddd; /* Margem colorida padrão */
+}
+
+.cartoes-kanban[data-coluna="analise"] {
+    border-left: 4px solid #ffeb3b;
+}
+
+.cartoes-kanban[data-coluna="indeferido"] {
+    border-left: 4px solid #ff9800;
+}
+
+.cartoes-kanban[data-coluna="deferido"] {
+    border-left: 4px solid #90caf9;
+}
+
+.cartoes-kanban[data-coluna="andamento"] {
+    border-left: 4px solid #4caf50;
+}
+
+.coluna-kanban.arrastando-sobre {
+    background-color: #e9ecef;
+}
+
+.cartoes-kanban:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}

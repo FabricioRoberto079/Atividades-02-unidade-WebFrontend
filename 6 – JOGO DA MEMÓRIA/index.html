@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Memória</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <h1>Jogo da Memória</h1>
+        <button id="restartBtn">Reiniciar Jogo</button>
+        <section class="memory-game">
+            <!-- Cartas -->
+            <div class="memory-card" data-framework="yugi">
+                <img class="front-face" src="yugi.png" alt="Yugi">
+                <img class="back-face" src="fundo.png" alt="Verso da Carta">
+            </div>
+            <div class="memory-card" data-framework="yugi">
+                <img class="front-face" src="yugi.png" alt="Yugi">
+                <img class="back-face" src="fundo.png" alt="Verso da Carta">
+            </div>
+            <div class="memory-card" data-framework="zane">
+                <img class="front-face" src="zane.png" alt="Zane">
+                <img class="back-face" src="fundo.png" alt="Verso da Carta">
+            </div>
+            <div class="memory-card" data-framework="zane">
+                <img class="front-face" src="zane.png" alt="Zane">
+                <img class="back-face" src="fundo.png" alt="Verso da Carta">
+            </div>
+            <div class="memory-card" data-framework="jaden">
+                <img class="front-face" src="jaden.png" alt="Jaden">
+                <img class="back-face" src="fundo.png" alt="Verso da Carta">
+            </div>
+            <div class="memory-card" data-framework="jaden">
+                <img class="front-face" src="jaden.png" alt="Jaden">
+                <img class="back-face" src="fundo.png" alt="Verso da Carta">
+            </div>
+        </section>
+        <div class="game-info">
+            <p>Tentativas: <span id="attemptsCount">0</span></p>
+            <div id="history"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Jogo da Memória. Desenvolvido por Fabrício Roberto.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

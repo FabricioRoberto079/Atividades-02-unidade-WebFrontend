@@ -1,0 +1,61 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="input-container">
+            <h1>Lista de Tarefas</h1>
+            <input type="text" id="entradaTarefa" placeholder="Adicione uma nova tarefa">
+            <button id="botaoAdicionarTarefa">Adicionar Tarefa</button>
+        </div>
+    </div>
+    <div class="quadro-kanban">
+        <div class="coluna-kanban">
+            <div class="cabecalho-coluna">
+                <div class="titulo-coluna">
+                    <span class="contador-coluna">1</span>
+                    Em aberto
+                </div>
+            </div>
+            <div class="cartoes-kanban" data-coluna="analise"></div>
+        </div>
+        
+        <div class="coluna-kanban">
+            <div class="cabecalho-coluna">
+                <div class="titulo-coluna">
+                    <span class="contador-coluna">0</span>
+                    Bid (Negociação)
+                </div>
+            </div>
+            <div class="cartoes-kanban" data-coluna="indeferido"></div>
+        </div>
+        
+        <div class="coluna-kanban">
+            <div class="cabecalho-coluna">
+                <div class="titulo-coluna">
+                    <span class="contador-coluna">0</span>
+                    Em andamento
+                </div>
+            </div>
+            <div class="cartoes-kanban" data-coluna="deferido"></div>
+        </div>
+        
+        <div class="coluna-kanban">
+            <div class="cabecalho-coluna">
+                <div class="titulo-coluna">
+                    <span class="contador-coluna">0</span>
+                    Entregue
+                </div>
+            </div>
+            <div class="cartoes-kanban" data-coluna="andamento"></div>
+        </div>
+        
+    
+    </div>
+</body>
+</html>
